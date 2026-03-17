@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flávia Nascimento - Psicóloga e Sexóloga Clínica em Palmas e Goiânia</title>
+    <meta name="description" content="Terapia Sexual, Pais Tentantes e Afirmação de Gênero. Atendimento especializado em Palmas e Goiânia com Flávia Nascimento.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importação das fontes solicitadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Tipografia conforme solicitado */
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+        
+        h1, h2, h3, h4, .brand-name { 
+            font-family: 'Cormorant Garamond', serif; 
+        }
+        
+        /* Identidade de Cores */
+        .brand-primary { color: #6a4f6d; }
+        .brand-primary-bg { background-color: #6a4f6d; }
+        .brand-accent { color: #b08a5d; }
+        .brand-accent-bg { background-color: #b08a5d; }
+        .footer-bg { background-color: #1a242f; } 
+        
+        .transition-all { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        
+        #mobile-menu { display: none; }
+        #mobile-menu.active { display: flex; }
+
+        /* Linhas de Destaque Simétricas */
+        .divider-line {
+            height: 2px;
+            background: linear-gradient(to right, transparent, rgba(176, 138, 93, 0.8), transparent);
+        }
+
+        /* Vídeo de Fundo Fixo */
+        .fixed-video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            opacity: 0.5; 
+        }
+        
+        .fixed-video-bg video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        /* Seções Transparentes */
+        .section-bg-glass {
+            background-color: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(4px);
+        }
+        
+        .texture-soft {
+            background-color: rgba(253, 251, 253, 0.82);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236a4f6d' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Botão Padrão 3D WhatsApp - Centralizado e Decente */
+        .btn-whatsapp-cta {
+            @apply px-12 py-10 rounded-full font-black transition-all duration-300 text-white uppercase tracking-[0.2em] text-center flex items-center justify-center mx-auto border-none outline-none;
+            background-color: #25D366; 
+            min-width: 350px;
+            max-width: 100%;
+            font-size: 1.1rem;
+            border-bottom: 8px solid #128C7E;
+            box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .btn-whatsapp-cta:hover {
+            @apply scale-105;
+            background-color: #20ba5a;
+            border-bottom-width: 4px;
+            transform: translateY(4px);
+            box-shadow: 0 10px 20px -5px rgba(37, 211, 102, 0.6);
+        }
+        .btn-whatsapp-cta:active {
+            border-bottom-width: 0px;
+            transform: translateY(8px);
+        }
+
+        .nav-link {
+            @apply text-gray-600 hover:text-[#b08a5d] transition-colors font-black uppercase tracking-widest text-[12px] relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1.5rem center;
+            background-size: 1.2em;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden relative">
+
+    <!-- Vídeo de Fundo Fixo -->
+    <div class="fixed-video-bg">
+        <video autoplay muted loop playsinline>
+            <source src="images/video_teste_fundo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-1 md:py-2 flex justify-between items-center text-center">
+            <div class="flex items-center space-x-6 text-left">
+                <!-- Logomarca Ampliada -->
+                <img src="images/logomarca_flavia_nascimentto.png" alt="Logo Flávia Nascimento" class="h-32 md:h-40 w-auto object-contain">
+                
+                <div class="flex flex-col justify-center">
+                    <a href="#" class="text-xl md:text-3xl font-bold brand-primary tracking-tighter leading-tight uppercase brand-name">FLÁVIA NASCIMENTO</a>
+                    <span class="text-[9px] md:text-[11px] uppercase tracking-[0.3em] brand-accent font-black">PSICÓLOGA E SEXÓLOGA CLÍNICA</span>
+                </div>
+            </div>
+            
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#sobre" class="nav-link">SOBRE MIM</a>
+                <div class="relative group text-left">
+                    <button class="nav-link flex items-center">CLÍNICA <i data-lucide="chevron-down" class="ml-1 w-4 h-4"></i></button>
+                    <div class="absolute top-full left-0 bg-white/95 backdrop-blur-lg shadow-2xl rounded-2xl p-5 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-gray-100 translate-y-3">
+                        <a href="#servicos" class="block py-2 hover:text-[#b08a5d] text-sm font-bold uppercase tracking-wider transition-colors">TERAPIA SEXUAL</a>
+                        <a href="#tentantes" class="block py-2 hover:text-[#b08a5d] text-sm font-bold uppercase tracking-wider transition-colors">PAIS TENTANTES</a>
+                        <a href="#casal" class="block py-2 hover:text-[#b08a5d] text-sm font-bold uppercase tracking-wider transition-colors">TERAPIA DE CASAL</a>
+                        <a href="#grupo" class="block py-2 hover:text-[#b08a5d] text-sm font-bold uppercase tracking-wider transition-colors">TERAPIA DE GRUPO</a>
+                    </div>
+                </div>
+                <div class="relative group text-left">
+                    <button class="nav-link flex items-center">DIVERSIDADE <i data-lucide="chevron-down" class="ml-1 w-4 h-4"></i></button>
+                    <div class="absolute top-full left-0 bg-white/95 backdrop-blur-lg shadow-2xl rounded-2xl p-5 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-gray-100 translate-y-3">
+                        <a href="#afirmativa" class="block py-2 hover:text-[#b08a5d] text-sm font-bold uppercase tracking-wider transition-colors">TERAPIA AFIRMATIVA</a>
+                        <a href="#lgbt" class="block py-2 hover:text-[#b08a5d] text-sm font-bold uppercase tracking-wider transition-colors">APOIO LGBTQIAPN+</a>
+                        <a href="#infantil" class="block py-2 hover:text-[#b08a5d] text-sm font-bold uppercase tracking-wider transition-colors">INFANTIL E ADOLESCENTE</a>
+                    </div>
+                </div>
+                <a href="#avaliacoes" class="nav-link transition-colors uppercase">AVALIAÇÕES</a>
+                <a href="#contato" class="btn-whatsapp-cta !min-w-0 !px-8 !py-4 !text-[10px] !border-b-4">AGENDAR CONSULTA AGORA</a>
+            </nav>
+
+            <button id="menu-toggle" class="lg:hidden p-2 text-gray-600"><i data-lucide="menu" class="w-8 h-8"></i></button>
+        </div>
+        <div class="divider-line"></div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="lg:hidden flex-col bg-white absolute w-full left-0 p-8 space-y-4 shadow-2xl z-50 border-t border-gray-100">
+            <a href="#sobre" class="mobile-link text-lg font-bold border-b border-gray-50 pb-2 uppercase">SOBRE MIM</a>
+            <div class="space-y-2">
+                <p class="text-xs uppercase font-bold text-brand-accent">CLÍNICA</p>
+                <a href="#servicos" class="mobile-link block pl-4 text-gray-700 font-bold uppercase">TERAPIA SEXUAL</a>
+                <a href="#tentantes" class="mobile-link block pl-4 text-gray-700 font-bold uppercase">PAIS TENTANTES</a>
+                <a href="#casal" class="mobile-link block pl-4 text-gray-700 font-bold uppercase">TERAPIA DE CASAL</a>
+                <a href="#grupo" class="mobile-link block pl-4 text-gray-700 font-bold uppercase">TERAPIA DE GRUPO</a>
+            </div>
+            <a href="#contato" class="btn-whatsapp-cta w-full text-base py-6" style="min-width: unset;">FALE COM A ESPECIALISTA</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner Inicial -->
+        <section id="home" class="w-full relative overflow-hidden bg-black/5">
+            <img src="images/banner_principal_flavia_Nascimentto.png" alt="Banner Principal Flávia Nascimento" class="w-full h-auto object-cover block">
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="py-24 section-bg-glass relative">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                    <div class="lg:w-2/5 text-center relative">
+                        <div class="absolute -inset-10 bg-brand-primary/5 rounded-full blur-3xl animate-pulse"></div>
+                        <img src="images/psi_flavia_nascimento.png" alt="Flávia Nascimento" class="rounded-full w-72 h-72 md:w-96 md:h-96 mx-auto object-cover shadow-2xl border-8 border-white relative z-10">
+                        <div class="mt-8 relative z-20">
+                            <h3 class="text-4xl font-extrabold brand-primary tracking-tight uppercase brand-name leading-tight">FLÁVIA NASCIMENTO</h3>
+                            <p class="text-brand-accent font-black tracking-[0.2em] uppercase text-xs mt-2">Psicóloga e Sexóloga Clínica | CRP/23 517</p>
+                        </div>
+                    </div>
+                    <div class="lg:w-3/5">
+                        <h2 class="text-5xl font-extrabold text-gray-800 mb-8 leading-tight uppercase brand-name">Olá! Muito prazer.</h2>
+                        <div class="space-y-6 text-gray-700 text-lg leading-relaxed text-justify">
+                            <p>Sou Flávia Nascimento, psicóloga, sexóloga clínica e terapeuta transpessoal centrada no corpo. Dedico os meus atendimentos a adultos, crianças e adolescentes. Os atendimentos com crianças e adolescentes - são apenas para demandas ligadas a gênero e sexualidade. Atendimentos com adultos, diversas demandas, com maior foco na sexualidade, disfunções sexuais masculinas e femininas.</p>
+                            <p>Minha maior motivação é ajudar pessoas a construírem relações saudáveis consigo mesmas e com os outros, terem autoconfiança e expressão plena da sua sexualidade, empoderamento pessoal, autoestima adequada, e vivência plena nas diversas áreas da vida, equilibrando a rotina do trabalho, vivências sociais e familiares.</p>
+                            <p>Não posso deixar de dizer o quanto sou apaixonada no atendimento com pessoas transgênero, e o quanto é gratificante acompanhar cada fase do processo de transição, onde tenho profundo respeito por cada processo e cada pessoa que me busca para caminhar junto, na direção do encontro com a essência real do seu eu, e a expressão da sua identidade de gênero. Esse processo não é somente do indivíduo transgênero, mas também da sua família. Oferecer um espaço para os pais de pessoas transgênero é uma grande realização profissional.</p>
+                            <p class="font-bold brand-primary text-2xl mt-4 italic text-justify">É uma honra ter você nesse espaço!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terapia Sexual Detalhada -->
+        <section id="servicos" class="py-24 texture-soft">
+            <div class="container mx-auto px-6 text-center">
+                <div class="w-24 h-1 brand-accent-bg mx-auto mb-8 rounded-full"></div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 uppercase tracking-widest leading-tight brand-name">Terapia Sexual</h2>
+                <div class="max-w-4xl mx-auto mt-6 text-gray-700 italic font-semibold text-lg leading-relaxed text-center">
+                    “Terapia sexual é um processo clínico estruturado que visa o tratamento das inadequações sexuais por meio de estratégias psicoterápicas e educativas, com foco na modificação de padrões cognitivos, emocionais e comportamentais que interferem negativamente na vivência sexual do indivíduo ou do casal.” 
+                    <span class="block text-xs mt-2 font-black not-italic text-brand-accent uppercase tracking-tighter">— Cavalcanti & Cavalcanti, 2019</span>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto mt-16 text-left">
+                    <div class="bg-white/90 backdrop-blur-sm p-12 rounded-[3rem] shadow-xl border-t-8 border-[#6a4f6d] hover:scale-[1.01] transition-all border-x border-b border-gray-100">
+                        <div class="flex items-center mb-10">
+                            <div class="w-16 h-16 brand-primary-bg rounded-2xl flex items-center justify-center text-white mr-5 shadow-lg"><i data-lucide="user"></i></div>
+                            <h3 class="text-3xl font-bold brand-primary uppercase tracking-tight brand-name">Masculina</h3>
+                        </div>
+                        <div class="space-y-8">
+                            <div class="group text-justify">
+                                <h4 class="font-extrabold text-gray-800 text-lg mb-1 uppercase">Desejo Sexual Hipoativo</h4>
+                                <p class="text-gray-500 text-base leading-relaxed">Falta persistente ou recorrente de interesse em atividades sexuais, ausência de fantasias e pensamentos eróticos que geram angústia.</p>
+                            </div>
+                            <div class="group text-justify">
+                                <h4 class="font-extrabold text-gray-800 text-lg mb-1 uppercase">Disfunção Erétil</h4>
+                                <p class="text-gray-500 text-base leading-relaxed">Dificuldade recorrente em obter ou manter uma ereção rígida o suficiente para uma relação satisfatória.</p>
+                            </div>
+                            <div class="group text-justify">
+                                <h4 class="font-extrabold text-gray-800 text-lg mb-1 uppercase">Ejaculação Rápida</h4>
+                                <p class="text-gray-500 text-base leading-relaxed">Ocorrência da ejaculação antes do desejado, com pouco controle sobre o reflexo, gerando frustração.</p>
+                            </div>
+                            <div class="group text-justify">
+                                <h4 class="font-extrabold text-gray-800 text-lg mb-1 uppercase">Ejaculação Retardada</h4>
+                                <p class="text-gray-500 text-base leading-relaxed">Atraso significativo ou incapacidade de ejacular apesar da estimulação adequada e desejo presente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/90 backdrop-blur-sm p-12 rounded-[3rem] shadow-xl border-t-8 border-[#b08a5d] hover:scale-[1.01] transition-all border-x border-b border-gray-100">
+                        <div class="flex items-center mb-10">
+                            <div class="w-16 h-16 brand-accent-bg rounded-2xl flex items-center justify-center text-white mr-5 shadow-lg"><i data-lucide="user-round"></i></div>
+                            <h3 class="text-3xl font-bold brand-accent uppercase tracking-tight brand-name">Feminina</h3>
+                        </div>
+                        <div class="space-y-8">
+                            <div class="group text-justify">
+                                <h4 class="font-extrabold text-gray-800 text-lg mb-1 uppercase">Desejo Sexual Hipoativo</h4>
+                                <p class="text-gray-500 text-base leading-relaxed">Baixo interesse sexual que impacta a qualidade de vida, muitas vezes ligado a questões hormonais, emocionais ou relacionais.</p>
+                            </div>
+                            <div class="group text-justify">
+                                <h4 class="font-extrabold text-gray-800 text-lg mb-1 uppercase">Dispareunia</h4>
+                                <p class="text-gray-500 text-base leading-relaxed">Dor persistente ou recorrente durante ou após o ato sexual, exigindo avaliação sensível e detalhada.</p>
+                            </div>
+                            <div class="group text-justify">
+                                <h4 class="font-extrabold text-gray-800 text-lg mb-1 uppercase">Anorgasmia</h4>
+                                <p class="text-gray-500 text-base leading-relaxed">Dificuldade ou incapacidade persistente de atingir o orgasmo após estimulação sexual suficiente e adequada.</p>
+                            </div>
+                            <div class="group text-justify">
+                                <h4 class="font-extrabold text-gray-800 text-lg mb-1 uppercase">Vaginismo</h4>
+                                <p class="text-gray-500 text-base leading-relaxed">Contrações involuntárias dos músculos do assoalho pélvico que dificultam ou impedem a penetração.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-20">
+                    <button onclick="scrollToContact('Terapia Sexual')" class="btn-whatsapp-cta">
+                        FALE COM A ESPECIALISTA AGORA
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pais Tentantes -->
+        <section id="tentantes" class="py-24 section-bg-glass relative overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-20 items-start">
+                    <div class="lg:w-1/2 relative">
+                        <div class="absolute -inset-6 brand-accent-bg opacity-5 rounded-[4rem] -rotate-3"></div>
+                        <img src="images/terapia_sexual.jpeg" alt="Atendimento Pais Tentantes" class="rounded-[4rem] w-full shadow-2xl relative z-10 border-8 border-white object-cover">
+                    </div>
+                    <div class="lg:w-1/2 text-left">
+                        <h2 class="text-4xl md:text-5xl font-extrabold brand-primary mb-8 leading-tight uppercase brand-name text-center lg:text-left">Atendimento a Pais Tentantes</h2>
+                        <div class="text-gray-700 text-lg leading-relaxed space-y-6 text-justify">
+                            <p>O atendimento psicológico a pais tentantes — casais ou indivíduos que estão tentando ter filhos — tem como objetivo oferecer suporte emocional e psicológico diante dos desafios da concepção. Este período costuma ser marcado por ansiedade, frustração, medo e sentimentos de impotência, especialmente quando a gestação não ocorre como esperado ou quando há diagnóstico de infertilidade. O acompanhamento psicológico para o casal tentante é fundamental, pois a dificuldade em engravidar pode se tornar uma crise existencial, afetando o bem estar emocional, o relacionamento conjugal e até a saúde física e hormonal do casal, podendo comprometer o resultado do processo em si.</p>
+                            
+                            <h4 class="font-extrabold text-gray-800 text-2xl mt-8 mb-4 uppercase brand-name">Benefícios do acompanhamento:</h4>
+                            <div class="grid md:grid-cols-1 gap-6 text-base">
+                                <div class="p-8 bg-white/50 rounded-2xl border-l-4 border-brand-accent shadow-sm">
+                                    <strong class="brand-primary block mb-1 uppercase text-xl">Equilíbrio emocional:</strong> o desejo de ter um filho pode vir acompanhado de expectativas, medos, ansiedade, autocobrança, que, se não tratados, podem gerar grande sofrimento.
+                                </div>
+                                <div class="p-8 bg-white/50 rounded-2xl border-l-4 border-brand-accent shadow-sm">
+                                    <strong class="brand-primary block mb-1 uppercase text-xl">Saúde física:</strong> Altos níveis de estresse podem impactar negativamente a produção de hormônios essenciais para a fertilidade, como o cortisol e a progesterona. O acompanhamento ajuda a controlar esses hormônios.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terapia de Casal -->
+        <section id="casal" class="py-28 brand-primary-bg text-white relative">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-5xl font-extrabold mb-10 uppercase tracking-widest leading-tight brand-name">Terapia de Casal</h2>
+                <div class="max-w-4xl mx-auto mb-16 space-y-8 text-xl leading-relaxed text-justify">
+                    <p>Terapia de casal com foco sexual é uma abordagem psicoterapêutica voltada para casais que enfrentam dificuldades na esfera sexual, as quais podem impactar a qualidade da relação afetiva como um todo. Esse tipo de terapia busca identificar, compreender e tratar disfunções ou insatisfações sexuais, promovendo a comunicação aberta e saudável entre os parceiros, estimulando enfrentamento das dificuldades.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 text-left mt-12 text-lg">
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex items-start"><i data-lucide="check-circle" class="mr-3 text-brand-accent flex-shrink-0 mt-1"></i> Melhorar a intimidade e a conexão sexual do casal.</li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="mr-3 text-brand-accent flex-shrink-0 mt-1"></i> Resolver disfunções sexuais (falta de desejo, disfunção erétil, anorgasmia, dor, etc).</li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="mr-3 text-brand-accent flex-shrink-0 mt-1"></i> Promover o autoconhecimento e o conhecimento do parceiro.</li>
+                        </ul>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex items-start"><i data-lucide="check-circle" class="mr-3 text-brand-accent flex-shrink-0 mt-1"></i> Trabalhar crenças limitantes, tabus e mitos sobre sexualidade.</li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="mr-3 text-brand-accent flex-shrink-0 mt-1"></i> Estimular o diálogo sobre desejos, fantasias e limites.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white/10 p-10 rounded-[3rem] backdrop-blur-md border border-white/10 mt-16 text-left">
+                        <h4 class="font-black text-2xl mb-6 uppercase tracking-tighter text-brand-accent brand-name">Benefícios:</h4>
+                        <div class="grid md:grid-cols-3 gap-8 text-lg font-bold">
+                            <p>Redução de conflitos e melhora na comunicação sexual.</p>
+                            <p>Promover a ativação do desejo e da conexão consciente.</p>
+                            <p>Fortalecimento do vínculo afetivo e satisfação conjugal.</p>
+                        </div>
+                        <p class="mt-8 pt-8 border-t border-white/10 italic text-center w-full opacity-70">Indicada para casais heterossexuais e LGBTQIAPN+ em qualquer fase do relacionamento.</p>
+                    </div>
+                </div>
+                <button onclick="scrollToContact('Terapia de Casal')" class="btn-whatsapp-cta">
+                    AGENDAR CONSULTA AGORA
+                </button>
+            </div>
+        </section>
+
+        <!-- Terapia de Grupo -->
+        <section id="grupo" class="py-24 section-bg-glass texture-soft relative">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-5xl font-extrabold mb-10 brand-primary uppercase tracking-widest leading-tight brand-name">Terapia de Grupo</h2>
+                <div class="max-w-4xl mx-auto mb-16 space-y-6 text-xl md:text-2xl leading-relaxed text-gray-800 font-medium text-center lg:text-justify">
+                    <p>Ninguém precisa caminhar sozinho. Nossos grupos são espaços de acolhimento coletivo onde o compartilhamento de histórias dissolve o isolamento e fortalece a superação de tabus e medos comuns.</p>
+                    <p class="font-black text-brand-accent uppercase tracking-[0.4em] text-lg text-center">Sincronicidade, Ética e Acolhimento Mútuo.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto mb-16">
+                    <div class="bg-white p-12 rounded-[3rem] shadow-xl border border-gray-100 hover:scale-105 transition-all text-left group">
+                        <i data-lucide="users" class="w-12 h-12 mb-6 text-brand-primary"></i>
+                        <h4 class="font-extrabold text-2xl mb-4 uppercase tracking-tighter brand-primary brand-name">Troca Segura</h4>
+                        <p class="text-gray-700 text-base leading-relaxed">Mediação profissional para que cada participante sinta-se validado em suas vivências e angústias.</p>
+                    </div>
+                    <div class="bg-white p-12 rounded-[3rem] shadow-xl border border-gray-100 hover:scale-105 transition-all text-left group">
+                        <i data-lucide="shield-check" class="w-12 h-12 mb-6 text-brand-primary"></i>
+                        <h4 class="font-extrabold text-2xl mb-4 uppercase tracking-tighter brand-primary brand-name">Desmistificação</h4>
+                        <p class="text-gray-700 text-base leading-relaxed">Espaço seguro para falar sobre temas desafiadores e encontrar novos recursos emocionais coletivos.</p>
+                    </div>
+                </div>
+                <button onclick="scrollToContact('Terapia de Grupo')" class="btn-whatsapp-cta">
+                    QUERO CONHECER OS GRUPOS
+                </button>
+            </div>
+        </section>
+
+        <!-- Diversidade e Gênero -->
+        <section id="lgbt" class="py-24 section-bg-glass relative">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-extrabold text-gray-800 flex items-center justify-center uppercase tracking-tight brand-name mb-20">
+                    <i data-lucide="umbrella" class="mr-4 text-brand-accent"></i> Diversidade e Gênero
+                </h2>
+
+                <div class="grid lg:grid-cols-2 gap-12 mb-12">
+                    <div id="afirmativa" class="bg-white/90 backdrop-blur-sm p-12 rounded-[4rem] shadow-xl border-l-[12px] border-brand-primary border-y border-r border-gray-100">
+                        <h3 class="text-3xl font-bold brand-primary mb-6 uppercase tracking-wider text-left brand-name">Terapia Afirmativa</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed text-justify mb-8">Abordagem que busca oferecer acolhimento, apoio e validação às identidades de pessoas transgênero, não binárias e de gênero diverso. Parte do princípio de que a identidade de gênero do indivíduo é legítima e exclui toda e qualquer idéia de patologização.</p>
+                        <p class="font-extrabold brand-primary text-xl mb-4 italic text-justify uppercase brand-name">Há 09 anos destino meus estudos e a prática clínica a esse público.</p>
+                        <div class="h-40 rounded-3xl overflow-hidden bg-gray-100">
+                            <img src="images/grupo_terapeutico_pais_em_transicao.png" alt="Apoio Trans" class="w-full h-full object-cover opacity-50">
+                        </div>
+                    </div>
+                    
+                    <div id="infantil" class="bg-white/90 backdrop-blur-sm p-12 rounded-[4rem] shadow-xl border-l-[12px] border-brand-accent border-y border-r border-gray-100 flex flex-col justify-between">
+                        <div class="text-left">
+                            <h3 class="text-3xl font-bold brand-accent mb-6 uppercase tracking-wider brand-name">Infantil e Adolescente</h3>
+                            <p class="text-gray-700 text-lg leading-relaxed text-justify mb-6 italic font-bold">Os atendimentos para adolescentes são somente para àqueles com questões de gênero e sexualidade.</p>
+                            <p class="text-gray-700 text-lg leading-relaxed text-justify mb-8">Identidade de gênero não é uma fase, é quem a criança é. O papel da psicologia não é corrigir — é cuidar, orientar e proteger, auxiliando os pais a lidar com a condição de incongruência de gênero do filho(a).</p>
+                        </div>
+                        <button onclick="scrollToContact('Atendimento Infantil')" class="btn-whatsapp-cta w-full">
+                            SOLICITAR ORIENTAÇÃO FAMILIAR
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Avaliações -->
+        <section id="avaliacoes" class="py-24 section-bg-glass relative text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 uppercase mb-16 tracking-tighter brand-name">Laudos e Avaliações Psicológicas</h2>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="p-10 bg-white rounded-[3rem] shadow-xl border border-gray-100">
+                        <div class="w-20 h-20 bg-brand-primary/10 rounded-3xl flex items-center justify-center mx-auto mb-8 text-brand-primary"><i data-lucide="file-text" class="w-10 h-10"></i></div>
+                        <h4 class="font-extrabold text-2xl mb-4 uppercase brand-name text-left lg:text-center">Laqueadura</h4>
+                        <p class="text-gray-700 text-base leading-relaxed text-justify">Assegurar que a paciente compreende totalmente a decisão consciente, livre e informada de um método contraceptivo permanente.</p>
+                    </div>
+                    <div class="p-10 bg-white rounded-[3rem] shadow-xl border border-gray-100">
+                        <div class="w-20 h-20 bg-brand-primary/10 rounded-3xl flex items-center justify-center mx-auto mb-8 text-brand-primary"><i data-lucide="check-square" class="w-10 h-10"></i></div>
+                        <h4 class="font-extrabold text-2xl mb-4 uppercase brand-name text-left lg:text-center">Vasectomia</h4>
+                        <p class="text-gray-700 text-base leading-relaxed text-justify">Garantir que a decisão seja consciente, voluntária e informada sobre as consequências definitivas.</p>
+                    </div>
+                    <div class="p-10 bg-white rounded-[3rem] shadow-xl border border-gray-100">
+                        <div class="w-20 h-20 bg-brand-primary/10 rounded-3xl flex items-center justify-center mx-auto mb-8 text-brand-primary"><i data-lucide="activity" class="w-10 h-10"></i></div>
+                        <h4 class="font-extrabold text-2xl mb-4 uppercase brand-name text-left lg:text-center">Prótese Peniana</h4>
+                        <p class="text-gray-700 text-base leading-relaxed text-justify">Avaliação essencial para homens cis. Visa compreender motivações, expectativas e garantir o preparo emocional para o procedimento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Final -->
+        <section id="contato" class="py-28 texture-soft relative">
+            <div class="container mx-auto px-6">
+                <div class="max-w-6xl mx-auto bg-white rounded-[4rem] shadow-3xl overflow-hidden flex flex-col lg:flex-row border border-gray-100">
+                    <div class="lg:w-1/2 p-12 md:p-20 brand-primary-bg text-white flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-white/5 pointer-events-none transform rotate-45 translate-x-1/2 scale-150"></div>
+                        <h2 class="text-5xl font-extrabold mb-10 leading-tight uppercase tracking-tighter brand-name">VAMOS AGENDAR UM HORÁRIO?</h2>
+                        <p class="text-white/80 text-xl mb-14 leading-relaxed">Escolha o serviço desejado. Nossa triagem inicial é feita com total sigilo profissional e ética.</p>
+                        <div class="space-y-10 font-bold">
+                            <div class="flex items-center space-x-6">
+                                <div class="p-4 bg-white/10 rounded-2xl shadow-inner"><i data-lucide="mail" class="text-brand-accent w-7 h-7"></i></div>
+                                <span class="text-lg break-all">sexologiapalmas@gmail.com</span>
+                            </div>
+                            <div class="flex items-center space-x-6">
+                                <div class="p-4 bg-white/10 rounded-2xl shadow-inner"><i data-lucide="phone" class="text-brand-accent w-7 h-7"></i></div>
+                                <span class="text-2xl font-black">+55 62 99905-8425</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 p-12 md:p-20 flex flex-col justify-center bg-white/95 text-center">
+                        <label class="block text-gray-800 font-extrabold mb-6 text-xl uppercase tracking-widest brand-name">SELECIONE O SERVIÇO:</label>
+                        <select id="service-select" class="w-full p-6 rounded-[2rem] border-2 border-gray-100 outline-none focus:border-brand-primary bg-gray-50 font-black text-xl text-gray-700 mb-12 shadow-sm transition-all text-center uppercase">
+                            <option value="" disabled selected>COMO POSSO TE AJUDAR?</option>
+                            <option value="TERAPIA SEXUAL">TERAPIA SEXUAL</option>
+                            <option value="PAIS TENTANTES">PAIS TENTANTES</option>
+                            <option value="TERAPIA DE CASAL">TERAPIA DE CASAL</option>
+                            <option value="AFIRMAÇÃO DE GÊNERO">AFIRMAÇÃO DE GÊNERO</option>
+                            <option value="ATENDIMENTO INFANTIL">GÊNERO: INFANTIL/ADOL.</option>
+                            <option value="LAUDOS">LAUDOS E AVALIAÇÕES</option>
+                        </select>
+                        <button onclick="sendToWhatsApp()" class="btn-whatsapp-cta w-full">
+                            AGENDAR CONSULTA AGORA
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Divisor acima do rodapé -->
+    <div class="divider-line"></div>
+
+    <!-- Rodapé -->
+    <footer class="footer-bg text-white pt-24 pb-12 relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="grid md:grid-cols-2 gap-20 items-start mb-20 text-left">
+                <div class="flex items-center space-x-8">
+                    <img src="images/logomarca_flavia_nascimentto.png" alt="Logo" class="h-24 w-auto brightness-0 invert opacity-70">
+                    <div>
+                        <h4 class="text-3xl font-bold mb-4 tracking-tighter leading-tight uppercase brand-name text-white">FLÁVIA NASCIMENTO</h4>
+                        <p class="text-white/60 text-xl font-medium mb-1 uppercase">PSICÓLOGA E SEXÓLOGA CLÍNICA</p>
+                        <p class="text-brand-accent text-lg font-bold uppercase tracking-widest">CRP/23 517</p>
+                    </div>
+                </div>
+                <div class="md:text-left">
+                    <h4 class="text-2xl font-bold mb-8 uppercase tracking-[0.3em] text-brand-accent brand-name">NAVEGAÇÃO</h4>
+                    <ul class="grid grid-cols-2 gap-y-4 gap-x-12 text-white/70 text-lg font-bold">
+                        <li><a href="#sobre" class="hover:text-white transition-colors uppercase">SOBRE MIM</a></li>
+                        <li><a href="#servicos" class="hover:text-white transition-colors uppercase">CLÍNICA</a></li>
+                        <li><a href="#tentantes" class="hover:text-white transition-colors uppercase">TENTANTES</a></li>
+                        <li><a href="#grupo" class="hover:text-white transition-colors uppercase">GRUPOS</a></li>
+                        <li><a href="#lgbt" class="hover:text-white transition-colors uppercase">DIVERSIDADE</a></li>
+                        <li><a href="#avaliacoes" class="hover:text-white transition-colors uppercase">LAUDOS</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center pt-10 border-t border-white/5">
+                <p class="text-xl font-medium text-white/50 tracking-tighter uppercase text-center">&copy; 2024 FLÁVIA NASCIMENTO - TODOS OS DIREITOS RESERVADOS.</p>
+                <p class="text-brand-accent text-sm mt-4 tracking-[0.5em] uppercase font-black text-center">ESPECIALIDADE, ÉTICA E ACOLHIMENTO HUMANO.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://api.whatsapp.com/send?phone=5562999058425" target="_blank" class="fixed bottom-10 right-10 bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-50">
+        <i data-lucide="message-circle" class="w-10 h-10"></i>
+    </a>
+
+    <script>
+        lucide.createIcons();
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+        document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('active')));
+
+        function scrollToContact(service) {
+            const select = document.getElementById('service-select');
+            if(service) select.value = service.toUpperCase();
+            document.querySelector('#contato').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function sendToWhatsApp() {
+            const select = document.getElementById('service-select');
+            const service = select.value;
+            let message = "Olá, Flávia! Gostaria de agendar uma consulta.";
+            if (service) message = `Olá, Flávia! Tenho interesse no atendimento para: ${service}. Como podemos prosseguir?`;
+            const url = `https://api.whatsapp.com/send?phone=5562999058425&text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
