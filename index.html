@@ -9,19 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Importação das fontes solicitadas -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
         /* Tipografia conforme solicitado */
-        body { 
+       body { 
             font-family: 'Montserrat', sans-serif; 
-            font-size: 1.15rem;
-            line-height: 1.7;
+            font-weight: 300; /* Peso leve para o corpo, como no template */
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #334155; /* Um cinza azulado mais suave para leitura */
         }
         
         h1, h2, h3, h4, .brand-name { 
-            font-family: 'Cormorant Garamond', serif; 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700;
         }
         
         /* Identidade de Cores */
@@ -184,27 +187,35 @@
 
     <main>
         <!-- Banner Inicial -->
-        <section id="home" class="relative w-full h-[85vh] md:h-screen overflow-hidden">
+       <section id="home" class="relative w-full h-[85vh] md:h-screen overflow-hidden">
     <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed" 
          style="background-image: url('images/banner_principal_flavia_nascimentto.jpg');">
     </div>
 
-    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 bg-black/45"></div>
 
     <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
-        <h1 class="text-white text-3xl md:text-6xl font-serif mb-6 max-w-4xl leading-tight drop-shadow-lg">
+        <h1 class="text-white text-3xl md:text-6xl font-['Playfair_Display'] font-bold mb-6 max-w-4xl leading-tight drop-shadow-lg">
             Equilibrando a vida, o casal e a chegada dos filhos
         </h1>
         
-        <p class="text-white text-lg md:text-2xl max-w-3xl mb-10 font-light drop-shadow-md">
+        <p class="text-white text-lg md:text-2xl max-w-3xl mb-10 font-['Montserrat'] font-light leading-relaxed drop-shadow-md">
             Acompanhamento especializado com a <strong>Psicóloga e Sexóloga Flávia Nascimento</strong> na jornada da parentalidade e saúde das relações.
         </p>
 
         <a href="https://wa.me/5562999058425" target="_blank" 
-           class="bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center gap-3">
-           <i class="fab fa-whatsapp text-2xl"></i>
+           class="bg-[#25D366] hover:bg-[#128C7E] text-white font-['Montserrat'] font-bold py-5 px-12 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center gap-3 uppercase tracking-widest text-sm">
+           <i data-lucide="message-circle" class="w-6 h-6"></i>
            Agendar consulta com a Dra. Flávia
         </a>
+    </div>
+</section>
+
+<section class="relative z-20 bg-white py-12 shadow-[0_-15px_30px_rgba(0,0,0,0.1)] rounded-t-[50px] -mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <p class="text-slate-400 font-['Montserrat'] uppercase tracking-[0.3em] text-xs font-bold mb-4">
+            Atendimento em Palmas, Goiânia e Online
+        </p>
     </div>
 </section>
 
