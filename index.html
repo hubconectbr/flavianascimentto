@@ -504,26 +504,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="lg:w-1/2 p-12 md:p-20 flex flex-col justify-center bg-white/95 text-center">
-                        <label class="block text-gray-800 font-extrabold mb-6 text-xl uppercase tracking-widest brand-name">SELECIONE O SERVIÇO:</label>
-                        <select id="service-select" class="w-full p-6 rounded-[2rem] border-2 border-gray-100 outline-none focus:border-brand-primary bg-gray-50 font-black text-xl text-gray-700 mb-12 shadow-sm transition-all text-center uppercase">
-                            <option value="" disabled selected>COMO POSSO TE AJUDAR?</option>
-                            <option value="TERAPIA SEXUAL">TERAPIA SEXUAL</option>
-                            <option value="PAIS TENTANTES">PAIS TENTANTES</option>
-                            <option value="TERAPIA DE CASAL">TERAPIA DE CASAL</option>
-                            <option value="AFIRMAÇÃO DE GÊNERO">AFIRMAÇÃO DE GÊNERO</option>
-                            <option value="ATENDIMENTO INFANTIL">GÊNERO: INFANTIL/ADOL.</option>
-                            <option value="LAUDOS">LAUDOS E AVALIAÇÕES</option>
-                        </select>
-                        <!--<button onclick="sendToWhatsApp()" class="btn-whatsapp-cta w-full">
-                            AGENDAR CONSULTA AGORA
-                        </button>-->
-
-                         <button onclick="sendToWhatsApp()" class="bg-[#25D366] hover:bg-[#128C7E] text-white font-['Montserrat'] font-bold py-4 px-8 xl:px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center gap-3 uppercase tracking-widest text-base whitespace-nowrap mx-auto">
-                            AGENDAR CONSULTA AGORA
-                         </button>
-                    </div>
-                </div>
+                 <div class="lg:w-1/2 p-8 md:p-16 lg:p-20 flex flex-col justify-center bg-white/95 text-center w-full min-w-0">
+                    <label class="block text-gray-800 font-extrabold mb-6 text-xl uppercase tracking-widest brand-name">
+                    SELECIONE O SERVIÇO:
+                    </label>
+    
+                    <select id="service-select" class="w-full py-4 px-4 md:px-6 rounded-[2rem] border-2 border-gray-100 outline-none focus:border-brand-primary bg-gray-50 font-black text-base md:text-xl text-gray-700 mb-10 shadow-sm transition-all text-center uppercase appearance-none cursor-pointer">
+                        <option value="" disabled selected>COMO POSSO TE AJUDAR?</option>
+                        <option value="TERAPIA SEXUAL">TERAPIA SEXUAL</option>
+                        <option value="PAIS TENTANTES">PAIS TENTANTES</option>
+                        <option value="TERAPIA DE CASAL">TERAPIA DE CASAL</option>
+                        <option value="AFIRMAÇÃO DE GÊNERO">AFIRMAÇÃO DE GÊNERO</option>
+                        <option value="ATENDIMENTO INFANTIL">GÊNERO: INFANTIL/ADOL.</option>
+                        <option value="LAUDOS">LAUDOS E AVALIAÇÕES</option>
+                    </select>
+                <button onclick="sendToWhatsApp()" class="bg-[#25D366] hover:bg-[#128C7E] text-white font-['Montserrat'] font-bold py-4 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center gap-3 uppercase tracking-widest text-sm md:text-base w-full max-w-md mx-auto">
+                    AGENDAR CONSULTA AGORA
+                </button>
+                </div>  
+            </div>
             </div>
         </section>
     </main>
